@@ -15,7 +15,7 @@ const Main = () => {
   const [error, seterrror] = useState({})
 
   const [tasks, settasks] = useState([])
-  const [editId, setEditId] = useState(null)   // <-- NEW: store id of item being edited
+  const [editId, setEditId] = useState(null)   //  id of item being edited
   const [search, setSearch] = useState("");
 
 
@@ -34,16 +34,6 @@ const Main = () => {
     return Object.keys(newErr).length === 0
   }
 
-  // get data
-  // const fetchdata = async () => {
-  //   try {
-  //     const response = await axios.get("http://127.0.0.1:8000/api/get/");
-  //     settasks(response.data)
-  //   }
-  //   catch {
-  //     console.log("something went wrong")
-  //   }
-  // }
 
 
   // get data with filter
@@ -113,7 +103,7 @@ const Main = () => {
         time: ""
       });
       fetchdata();
-      // 🔥 RESET FIELDS AFTER UPDATE
+    
       setEditId(null);
       setchocolate_name("");
       setdescription("");

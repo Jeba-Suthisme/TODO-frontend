@@ -16,9 +16,8 @@ const Signup = () => {
   const navigate = useNavigate();
 
 
-  // --------------------------
   // SIGNUP BUTTON
-  // --------------------------
+
   const handleSignup = async () => {
     setError("");
 
@@ -48,9 +47,9 @@ const Signup = () => {
     }
   };
 
-  // --------------------------
+ 
   // SEND OTP EMAIL
-  // --------------------------
+ 
   const sendEmailOTP = async () => {
     await axios.post("http://127.0.0.1:8000/api/contact/", {
       name,

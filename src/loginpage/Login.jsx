@@ -16,7 +16,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   // LOGIN BUTTON
-  // --------------------------
+  
   const handleLogin = async () => {
     setError("");
 
