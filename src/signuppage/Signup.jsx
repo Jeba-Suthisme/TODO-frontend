@@ -2,7 +2,7 @@ import React from 'react'
 import style from './signup.module.css'
 import axios from 'axios'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { useNavigate } from "react-router-dom";
 
 
@@ -33,7 +33,7 @@ const Signup = () => {
         email,
       });
 
-      await sendEmailOTP();
+      sendEmailOTP();
 
       alert("Signup + OTP Sent Successfully!");
       navigate("/todo");
@@ -63,7 +63,7 @@ const Signup = () => {
      <div>
       <h1 >SIGN UP</h1>
        <input type='text' placeholder='enter your name ' value={name} onChange={(e)=>setname(e.target.value)}/>
-       <input type='text' placeholder='enter your phone number ' value={phone_number} onChange={(e)=>setphone_number(e.target.value)}/>
+       <input type='text' placeholder='enter your phone number ' maxLength={10} value={phone_number} onChange={(e)=>setphone_number(e.target.value)}/>
 
        <input type='text' placeholder='enter your email' value={email} onChange={(e)=>setemail(e.target.value)}/>
         {error && <p style={{ color: "red" }}>{error}</p>}
